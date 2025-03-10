@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Talent</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(at 20% 20%, #ff9a9e, transparent 60%),
+                        radial-gradient(at 80% 30%, #a18cd1, transparent 60%),
+                        radial-gradient(at 40% 80%, #fbc2eb, transparent 60%),
+                        radial-gradient(at 70% 70%, #a6c1ee, transparent 60%),
+                        radial-gradient(at 30% 60%, #fad0c4, transparent 60%);
+            background-color: #f3e7e9;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            padding: 40px;
+            min-height: 100vh;
+          }
+        #search {
+            background: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .profile {
+            border: 1px solid #0b0b0b;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="search">
+        <h2>Discover Talent</h2>
+        <label>Skill Category:
+            <select id="skillFilter">
+                <option value="All">All</option>
+                <option value="Developer">Developer</option>
+                <option value="Designer">Designer</option>
+                <option value="Musician">Musician</option>
+                <option value="coreography">coreography</option>
+                <option value="Painter">Painter</option>
+                <option value="artist">artist</option>
+            </select>
+        </label>
+        <label>Location:
+            <input type="text" id="locationFilter" placeholder="City or PIN code">
+        </label>
+        <label>Experience Level:
+            <select id="experienceFilter">
+                <option value="All">All</option>
+                <option value="Student">Student</option>
+                <option value="Hobbyist">Hobbyist</option>
+                <option value="Professional">Professional</option>
+            </select>
+        </label>
+        <button onclick="filterProfiles()">Filter</button>
+    </section>
+
+    <section id="projects">
+        <h2>Project Showcase</h2>
+        <div class="project-card">
+            <h3>Artist | Mumbai| 5 Years of Creative Exploration</h3>
+            <p>by Samridhi</p>
+        </div>
+        <div class="project-card">
+            <h3>Portfolio Website| Frontend Developer | Delhi</h3>
+            <p>by Arjun Mehta</p>
+        </div>
+        <div class="project-card">
+            <h3>International Artist| 10 Years of Creative Mastery | Rajasthan, India
+                </h3>
+            <p>by Shikha Sharma</p>
+        </div>
+        <div class="project-card">
+            <h3>
+               Music Artist| Vocalist | Performer| Punjab </h3>
+            <p>by Ruchi Chords</p>
+        </div>
+    </div>
+    <div class="project-card">
+        <h3>
+            Choreography | Jharkhand </h3>
+        <p>by Imanvi
+            </p>
+    </div>
+</div>
+<div class="project-card">
+    <h3>
+        Anime Creator| Uttar Pradesh </h3>
+    <p>by Anymootion
+        </p>
+</div>
+<div class="project-card">
+    <h3>
+        Vegetarian Recipe Creator | 16 Years of Experience | Uttar Pradesh, India </h3>
+    <p>by Nisha Madhulika
+        </p>
+</div>
+<div class="project-card">
+    <h3>
+        International Artist | 10 Years of Creative Mastery  </h3>
+    <p>by Shintu Moury
+        </p>
+</div>
+<div class="project-card">
+    <h3>
+        Motivational Speaker | 12 Years of Experience | Delhi, India </h3>
+    <p>by Sandeep Maheshwari
+        </p>
+</div>
+    </section>
+
+    
+
+    <script>
+        function filterProfiles() {
+            const skill = document.getElementById('skillFilter').value.toLowerCase();
+            const location = document.getElementById('locationFilter').value.toLowerCase();
+            const experience = document.getElementById('experienceFilter').value.toLowerCase();
+
+            const profiles = document.querySelectorAll('.profile');
+
+            profiles.forEach(profile => {
+                const profileSkill = profile.dataset.skill.toLowerCase();
+                const profileLocation = profile.dataset.location.toLowerCase();
+                const profileExperience = profile.dataset.experience.toLowerCase();
+
+                const matchesSkill = (skill === "all" || profileSkill === skill);
+                const matchesLocation = (location === "" || profileLocation.includes(location));
+                const matchesExperience = (experience === "all" || profileExperience === experience);
+
+                if (matchesSkill && matchesLocation && matchesExperience) {
+                    profile.classList.remove('hidden');
+                } else {
+                    profile.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

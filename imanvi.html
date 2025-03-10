@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AM | Choreographer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: radial-gradient(at 20% 20%, #ff9a9e, transparent 60%),
+                    radial-gradient(at 80% 30%, #a18cd1, transparent 60%),
+                    radial-gradient(at 40% 80%, #fbc2eb, transparent 60%),
+                    radial-gradient(at 70% 70%, #a6c1ee, transparent 60%),
+                    radial-gradient(at 30% 60%, #fad0c4, transparent 60%);
+        background-color: #f3e7e9;
+        background-size: cover;
+        background-attachment: fixed;
+        color: #333;
+        padding: 40px;
+        min-height: 100vh;
+      }
+    @keyframes moveBg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #e91e63;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .section p, .section ul {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .section ul li {
+      margin-bottom: 8px;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #ec4899;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .links a:hover {
+      color: #be185d;
+    }
+
+    .hire-btn {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 0;
+      padding: 14px 32px;
+      background-color: #e91e63;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hire-btn:hover {
+      background-color: #ad1457;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Imanvi</h1>
+    <h2>Choreographer | Dance Instructor</h2>
+
+    <div class="section">
+      <h3>💃 Bio</h3>
+      <p>
+        AM is a passionate choreographer with 13 years of experience in teaching, performing, and creating expressive dance routines across various genres. Known for vibrant energy, elegant choreography, and soulful moves, AM continues to inspire dancers of all ages through performance and mentorship.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>🕺 Skills</h3>
+      <ul>
+        <li>Contemporary Dance</li>
+        <li>Bollywood & Freestyle Choreography</li>
+        <li>Stage Performance Planning</li>
+        <li>Wedding & Event Choreography</li>
+        <li>Dance Workshops & Training Programs</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🎬 Portfolio Highlights</h3>
+      <ul>
+        <li>Choreographed over 100+ stage performances and dance shows</li>
+        <li>Led dance training sessions for local schools and cultural events</li>
+        <li>Created unique dance routines for weddings, parties & ceremonies</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>📍 Location</h3>
+      <p>Ranchi, Jharkhand, India</p>
+    </div>
+
+    <div class="section">
+      <h3>📩 Contact</h3>
+      <p>Email: <a href="mailto:contact.am.choreo@gmail.com">contact.am.choreo@gmail.com</a></p>
+    </div>
+
+    <div class="section">
+      <h3>🔗 Links</h3>
+      <div class="links">
+        <a href="https://youtube.com/@imanvi1013" target="_blank">YouTube Channel</a>
+        <a href="https://www.instagram.com/imanvi1013/?hl=en" target="_blank">Instagram Profile</a>
+      </div>
+    </div>
+
+    <a href="mailto:contact.am.choreo@gmail.com" class="hire-btn">Hire Me</a>
+
+    <footer>
+      © 2025 AM | Choreographer Portfolio
+    </footer>
+  </div>
+</body>
+</html>

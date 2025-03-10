@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(at 20% 20%, #ff9a9e, transparent 60%),
+                        radial-gradient(at 80% 30%, #a18cd1, transparent 60%),
+                        radial-gradient(at 40% 80%, #fbc2eb, transparent 60%),
+                        radial-gradient(at 70% 70%, #a6c1ee, transparent 60%),
+                        radial-gradient(at 30% 60%, #fad0c4, transparent 60%);
+            background-color: #f3e7e9;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            padding: 40px;
+            min-height: 100vh;
+          }
+
+        .showcase-section {
+            padding: 40px;
+            background: linear-gradient(135deg, #fefefe, #e2e6ea);
+        }
+
+        .showcase-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .showcase-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .showcase-item {
+            background:radial-gradient(at 20% 20%, #ff9a9e, transparent 60%),
+            radial-gradient(at 80% 30%, #a18cd1, transparent 60%),
+            radial-gradient(at 40% 80%, #fbc2eb, transparent 60%),
+            radial-gradient(at 70% 70%, #a6c1ee, transparent 60%),
+            radial-gradient(at 30% 60%, #fad0c4, transparent 60%);
+            
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .showcase-item .info {
+            padding: 15px;
+        }
+
+        .showcase-item .info h4 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+            color: #222;
+        }
+
+        .showcase-item .info p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="showcase-section">
+        <h2>Showcase Gallery</h2>
+        <div class="showcase-gallery">
+            <div class="showcase-item">
+                <img src="https://wallpapercave.com/wp/wp9758200.jpg" alt="Project 1">
+                <div class="info">
+                    <h4>Live Performance</h4>
+                    <p>A snapshot from the latest stage show in Delhi.</p>
+                </div>
+            </div>
+            <div class="showcase-item">
+                <img src="https://i.pinimg.com/originals/2d/5a/93/2d5a938785bf7a37690d157997f46fca.jpg" alt="Project 2">
+                <div class="info">
+                    <h4>Artwork Display</h4>
+                    <p>Featured at the Art Expo 2024, Rajasthan.</p>
+                </div>
+            </div>
+            <div class="showcase-item">
+                <img src="https://i.pinimg.com/736x/c8/4a/f3/c84af3415e207c85983ede094a99306e.jpg" alt="Project 3">
+                <div class="info">
+                    <h4>Studio Recording</h4>
+                    <p>Behind-the-scenes from a music production studio in Mumbai.</p>
+                </div>
+            </div>
+            <div class="showcase-item">
+                <img src="https://cdn.dribbble.com/users/1231865/screenshots/5360632/startups-logo-design-and-branding_4x.jpg" alt="Project 4">
+                <div class="info">
+                    <h4>Client Project</h4>
+                    <p>Logo design and branding for a local startup.</p>
+                </div>
+            </div>
+            <div class="showcase-item">
+                <img src="https://th.bing.com/th/id/OIP.LK6C4NisXHovEN7ycoq4qwHaHa?w=1024&h=1024&rs=1&pid=ImgDetMain.jpg" alt="Project 5">
+                <div class="info">
+                    <h4>Motivational Speaker</h4>
+                    <p>A snapshot from the latest stage show in Delhi.</p>
+                </div>
+            </div>
+            <div class="showcase-item">
+                <img src="https://i.pinimg.com/originals/2a/d9/90/2ad9904e9cf1307828d8466ea57e445e.jpg" alt="Project 6">
+                <div class="info">
+                    <h4>Choreography</h4>
+                    <p>Performance at national dance festival.</p>
+                </div>
+            </div>
+            <div class="showcase-item">
+                <img src="https://th.bing.com/th/id/OIP.Sg67H5xad_5R_96iEtoH0AHaKd?rs=1&pid=ImgDetMain" alt="Project 7">
+                <div class="info">
+                    <h4>Anime Designer</h4>
+                    <p>Character design for animated series.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

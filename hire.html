@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hire a Talent</title>
+  <style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: radial-gradient(at 20% 20%, #ff9a9e, transparent 60%),
+                    radial-gradient(at 80% 30%, #a18cd1, transparent 60%),
+                    radial-gradient(at 40% 80%, #fbc2eb, transparent 60%),
+                    radial-gradient(at 70% 70%, #a6c1ee, transparent 60%),
+                    radial-gradient(at 30% 60%, #fad0c4, transparent 60%);
+        background-color: #f3e7e9;
+        background-size: cover;
+        background-attachment: fixed;
+        color: #333;
+        padding: 40px;
+        min-height: 100vh;
+      }
+
+    .container {
+      max-width: 600px;
+      background-color: #fff;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #2196F3;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Hire a Talent</h2>
+    <form action="submit-hire-form.php" method="POST">
+      <label for="name">Your Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="talent">Whom Do You Want to Hire?</label>
+      <input type="text" id="talent" name="talent" placeholder="e.g. Ahan Rayzada (Musician), Priya Sharma (Designer)" required>
+
+      <label for="when">When Do You Need Them?</label>
+      <input type="date" id="when" name="when" required>
+
+      <label for="duration">For How Long? (Duration)</label>
+      <input type="text" id="duration" name="duration" placeholder="e.g. 3 days, 2 weeks, 1 month" required>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" required>
+
+      <label for="budget">Price / Budget</label>
+      <input type="text" id="budget" name="budget" placeholder="e.g. ₹10,000 or Negotiable">
+
+      <label for="details">Further Requirements / Details</label>
+      <textarea id="details" name="details" rows="5" placeholder="Mention anything extra like accommodation, work scope, expectations etc."></textarea>
+
+      <button type="submit">Submit Hiring Request</button>
+    </form>
+  </div>
+
+</body>
+</html>
