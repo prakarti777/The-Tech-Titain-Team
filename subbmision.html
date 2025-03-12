@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talent Submission</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(at 20% 20%, #ff9a9e, transparent 60%),
+                        radial-gradient(at 80% 30%, #a18cd1, transparent 60%),
+                        radial-gradient(at 40% 80%, #fbc2eb, transparent 60%),
+                        radial-gradient(at 70% 70%, #a6c1ee, transparent 60%),
+                        radial-gradient(at 30% 60%, #fad0c4, transparent 60%);
+            background-color: #f3e7e9;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            padding: 40px;
+            min-height: 100vh;
+          }
+        form {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, select {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #2196F3;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        #techFields {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleTechFields() {
+            var profession = document.getElementById("profession").value;
+            var techFields = document.getElementById("techFields");
+            if (profession === "Developer" || profession === "Tech") {
+                techFields.style.display = "block";
+            } else {
+                techFields.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Submit Your Talent Profile</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" name="profession" placeholder="Your Profession" required>
+        <input type="text" name="youtube" placeholder="YouTube Channel Link">
+        <input type="text" name="instagram" placeholder="Instagram ID">
+        <input type="text" name="twitter" placeholder="Twitter ID">
+        <input type="text" name="experience" placeholder="Experience">
+        
+        <!-- Conditional fields (optional) -->
+        <input type="text" name="leetcode" placeholder="LeetCode Profile">
+        <input type="text" name="linkedin" placeholder="LinkedIn Profile">
+        
+        <input type="email" name="gmail" placeholder="Email">
+        <input type="text" name="phone" placeholder="Phone">
+        <textarea name="address" placeholder="Address"></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>

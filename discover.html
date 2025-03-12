@@ -1,0 +1,171 @@
+<!-- discover.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discover Talent</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function filterTalent() {
+            const category = document.getElementById("skill").value.toLowerCase();
+            const location = document.getElementById("location").value.toLowerCase();
+            const experience = document.getElementById("experience").value.toLowerCase();
+
+            const cards = document.querySelectorAll(".profile-card");
+
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute("data-skill").toLowerCase();
+                const cardLocation = card.getAttribute("data-location").toLowerCase();
+                const cardExperience = card.getAttribute("data-experience").toLowerCase();
+
+                if (
+                    (category === "all" || cardCategory.includes(category)) &&
+                    (location === "" || cardLocation.includes(location)) &&
+                    (experience === "all" || cardExperience.includes(experience))
+                ) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(at 20% 20%, #ff9a9e, transparent 60%),
+                        radial-gradient(at 80% 30%, #a18cd1, transparent 60%),
+                        radial-gradient(at 40% 80%, #fbc2eb, transparent 60%),
+                        radial-gradient(at 70% 70%, #a6c1ee, transparent 60%),
+                        radial-gradient(at 30% 60%, #fad0c4, transparent 60%);
+            background-color: #f3e7e9;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            padding: 40px;
+            min-height: 100vh;
+          }
+        #search {
+            background: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .profile {
+            border: 1px solid #0b0b0b;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Discover Talent</h1>
+        <a href="files.html">← Back to Home</a><br>
+    </header>
+
+    <section id="search">
+        <label>Skill Category:
+            <select id="skill">
+                <option>All</option>
+                <option>Developer</option>
+                <option>Designer</option>
+                <option>Musician</option>
+                <option>Writer</option>
+                <option>Painter</option>
+            </select>
+        </label>
+        <label>Location:
+            <input type="text" id="location" placeholder="City or State">
+        </label>
+        <label>Experience Level:
+            <select id="experience">
+                <option>All</option>
+                <option>Student</option>
+                <option>Hobbyist</option>
+                <option>Professional</option>
+            </select>
+        </label>
+        <button onclick="filterTalent()">Filter</button>
+    </section>
+
+    <section class="showcase-container">
+        <div class="profile-card" data-skill="Musician" data-location="Assam" data-experience="Professional">
+            <h3>Ahan Rayzada</h3>
+            <p>Musician | Assam</p>
+            <p>Experience: 5 years</p>
+        </div>
+        <div class="profile-card" data-skill="Game Developer" data-location="Hyderabad" data-experience="Professional">
+            <h3>Keshav Sharma</h3>
+            <p>Game Developer | Hyderabad</p>
+            <p>Experience: 5 years</p>
+        </div>
+       
+        <div class="profile-card" data-skill="Artist" data-location="Mumbai" data-experience="Professional">
+
+                <h3>Artist | Mumbai| 5 Years of Creative Exploration</h3>
+                <p>by Samridhi</p>
+            </div>
+            <div class="profile-card" data-skill="Frontend Developer" data-location="Delhi" data-experience="Professional">
+
+                <h3>Portfolio Website| Frontend Developer | Delhi</h3>
+                <p>by Arjun Mehta</p>
+            </div> 
+            <div class="profile-card" data-skill="Artist" data-location="Rajasthan" data-experience="Professional">
+
+                <h3>International Artist| 10 Years of Creative Mastery | Rajasthan, India
+                    </h3>
+                <p>by Shikha Sharma</p>
+            </div>
+            <div class="profile-card" data-skill="Musician" data-location="Punjab" data-experience="Professional">
+
+                <h3>
+                   Music Artist| Vocalist | Performer| Punjab </h3>
+                <p>by Ruchi Chords</p>
+            </div>
+        </div>
+        <div class="profile-card" data-skill="Choreographer" data-location="Jharkhand" data-experience="Professional">
+
+            <h3>
+                Choreography | Jharkhand </h3>
+            <p>by Imanvi
+                </p>
+        </div>
+    </div>
+    <div class="profile-card" data-skill="Anime Creater" data-location="Uttar Pradesh" data-experience="Professional">
+
+        <h3>
+            Anime Creator| Uttar Pradesh </h3>
+        <p>by Anymootion
+            </p>
+    </div>
+    <div class="profile-card" data-skill="Kitchen Shef" data-location="Uttar Pradesh" data-experience="Professional">
+
+        <h3>
+            Vegetarian Recipe Creator | 16 Years of Experience | Uttar Pradesh, India </h3>
+        <p>by Nisha Madhulika
+            </p>
+    </div>
+    <div class="profile-card" data-skill="Artist" data-location="Hyderabad" data-experience="Professional">
+
+        <h3>
+            International Artist | 10 Years of Creative Mastery  </h3>
+        <p>by Shintu Moury
+            </p>
+    </div>
+    <div class="profile-card" data-skill="Motivational Speaker" data-location="Delhi" data-experience="Professional">
+
+        <h3>
+            Motivational Speaker | 12 Years of Experience | Delhi, India </h3>
+        <p>by Sandeep Maheshwari
+            </p>
+    </div>
+        </section>
+        <!-- Add more talent cards as needed -->
+    </section>
+</body>
+</html>

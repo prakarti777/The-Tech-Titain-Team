@@ -1,0 +1,24 @@
+<!-- templates/view_hirers.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hire Submissions</title>
+</head>
+<body>
+    <h2>All Hire Requests</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            {% for heading in headers %}
+                <th>{{ heading }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in submissions %}
+            <tr>
+                {% for item in row %}
+                    <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

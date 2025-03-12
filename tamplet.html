@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submitted Talent Profiles</title>
+</head>
+<body>
+    <h2>All Submitted Talent Profiles</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Profession</th>
+            <th>YouTube</th>
+            <th>Instagram</th>
+            <th>Twitter</th>
+            <th>Experience</th>
+            <th>LeetCode</th>
+            <th>LinkedIn</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+        </tr>
+        {% for row in talents %}
+        <tr>
+            {% for item in row %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
